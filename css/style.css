@@ -1,0 +1,70 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Full-height container to center its content */
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text inside container */
+}
+
+/* Style the button */
+#get-character {
+    background-color: powderblue;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px; /* Space between button and character display */
+}
+
+/* Add a hover effect for the button */
+#get-character:hover {
+    background-color: lightblue;
+}
+
+/* Style for the character display */
+#character-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#character-image {
+    max-width: 200px;
+    max-height: 300px;
+}
+
+#character-name {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Style for the image element */
+#character-image {
+    max-width: 200px;
+    max-height: 300px;
+    display: block; /* Ensure the image is a block-level element */
+    margin: 0 auto; /* Center the image */
+    background-color: #f0f0f0; /* Light gray background to indicate an empty state */
+    background-image: url('path/to/placeholder.png'); /* Path to a placeholder image */
+    background-size: cover; /* Ensure the background image covers the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+}
+
+/* Hide the image if src is not set or loading fails */
+#character-image.no-image {
+    display: none;
+}
